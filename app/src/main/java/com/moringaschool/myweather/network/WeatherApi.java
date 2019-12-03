@@ -17,6 +17,13 @@ public interface WeatherApi {
             @Query("units") String unit
     );
 
+    @GET("data/2.5/weather")
+    Observable<WeatherResult> getWeatherByName(
+            @Query("q") String cityName,
+            @Query("appid") String appid,
+            @Query("units") String unit
+    );
+
     @GET("data/2.5/forecast")
     Observable<WeatherForecastResult> getForecast(
             @Query("lat") String lat,

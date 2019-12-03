@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Settings" android:textColor="#FDF8FCFC">
+            <menu>
+                <item
+                    android:id="@+id/nav_location"
+                    android:icon="@drawable/ic_location_on_black_24dp"
+                    android:title="Edit location" />
+                <item
+                    android:id="@+id/nav_language"
+                    android:icon="@drawable/ic_language_black_24dp"
+                    android:title="Language" />
+                <!--                <item-->
+                <!--                    android:id="@+id/nav_settings"-->
+                <!--                    android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--                    android:title="Settings" />-->
+            </menu>
+        </item>
+    </group>
+    <item android:title="communicate" android:textColor="#FDF8FCFC">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_black_24dp"
+                android:title="help" />
+            <item
+                android:id="@+id/nav_Privacy"
+                android:icon="@drawable/ic_lock_black_24dp"
+                android:title="Privacy" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_rate_review_black_24dp"
+                android:title="Rate Review" />
+        </menu>
+    </item>
+</menu>
