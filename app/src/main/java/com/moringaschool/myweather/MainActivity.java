@@ -42,8 +42,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 //    ELIANE
     public static final String TAG = MainActivity.class.getSimpleName();
-    private String gender;
-//  Eliane
+    public static String gender;
+    //  Eliane
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -107,13 +107,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).check();
 
-//        mDrawerLayout = findViewById( R.id.root_view );
-//        mToggle = new ActionBarDrawerToggle( this , mDrawerLayout , R.string.open , R.string.close );
-//        mDrawerLayout.addDrawerListener( mToggle );
-//        mToggle.syncState();
-//        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
-//        NavigationView nvDrawer = (NavigationView) findViewById( R.id.nav_header );
-//        setupDrawerContent( nvDrawer );
+        mDrawerLayout = findViewById( R.id.activity_main );
+        mToggle = new ActionBarDrawerToggle( this , mDrawerLayout , R.string.open , R.string.close );
+        mDrawerLayout.addDrawerListener( mToggle );
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+        NavigationView nvDrawer = (NavigationView) findViewById( R.id.nav_header );
+        setupDrawerContent( nvDrawer );
     }
 
 
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 //        adapter.addFragment(TodayWeatherFragment.getInstance(),"Today");
-        adapter.addFragment(ForecastFragment.getInstance(),"5days");
+        adapter.addFragment(ForecastFragment.getInstance(),"");
 
         viewPager.setAdapter(adapter);
 
@@ -203,6 +203,5 @@ public class MainActivity extends AppCompatActivity {
         {
         }
     }
-
 
 }

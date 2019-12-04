@@ -22,7 +22,7 @@ public class ClothingActivity extends AppCompatActivity {
 //        String description = intent.getStringExtra("description");
 //        String maxStringTemp = intent.getStringExtra("maxTemp");
         String tempString = intent.getStringExtra("temp");
-        String gender = intent.getStringExtra("gender");
+        String gender = MainActivity.gender;
         Double temperature = new Double(tempString);
         switch(gender){
             case "male":

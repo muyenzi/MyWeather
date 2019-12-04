@@ -45,20 +45,19 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 //        Picasso.get().load(new StringBuilder("https://openweathermap.org/img/wn/").append(weatherForecastResult.getList().get(position).getWeather().get(0).getIcon()).append(".png").toString()).into(holder.img_weather);
         holder.txt_date_time.setText(new StringBuilder(Common.convertUnixToDate(weatherForecastResult.getList().get(position).getDt())));
         holder.txt_description.setText(new StringBuilder (String.valueOf(weatherForecastResult.getList().get(position).getWeather().get(0).getDescription())));
-        holder.txt_temperature.setText(new StringBuilder(String.valueOf(weatherForecastResult.getList().get(position).getMain().getTemp())).append("°C"));
+        holder.txt_temperature.setText(new StringBuilder(String.valueOf(weatherForecastResult.getList().get(position).getMain().getTemp())));
         holder.txt_main.setText(new StringBuilder(String.valueOf(weatherForecastResult.getList().get(position).getWeather().get(0).getMain())));
-
         holder.txt_temperature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ClothingActivity.class);
                 intent.putExtra("temp",holder.txt_temperature.getText());
-
 //                System.out.println("temp" + holder.txt_temperature.getText().toString());
                 context.startActivity(intent);
 
             }
         });
+
 
     }
 
@@ -73,7 +72,6 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 
         TextView txt_date_time,txt_description,txt_temperature,txt_main;
         ImageView img_weather;
-
         public MyViewHolder(View itemView){
             super(itemView);
 
@@ -81,8 +79,8 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 //            img_weather = (ImageView) itemView.findViewById(R.id.img_weather);
             txt_temperature = (TextView) itemView.findViewById(R.id.txt_temperature);
             txt_description = (TextView) itemView.findViewById(R.id.txt_description);
-            txt_main = (TextView) itemView.findViewById(R.id.main);
 
+            txt_main = (TextView) itemView.findViewById(R.id.main);
 
         }
 

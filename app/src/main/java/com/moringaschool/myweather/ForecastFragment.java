@@ -23,7 +23,6 @@ import com.moringaschool.myweather.models.WeatherForecastResult;
 import com.moringaschool.myweather.models.WeatherResult;
 import com.moringaschool.myweather.network.WeatherApi;
 import com.moringaschool.myweather.network.WeatherClient;
-import com.squareup.picasso.Picasso;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -70,7 +69,7 @@ public class ForecastFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View itemView = inflater.inflate(R.layout.fragment_forecast, container, false);
-        img_weather = (ImageView) itemView.findViewById(R.id.img_weather);
+//        img_weather = (ImageView) itemView.findViewById(R.id.img_weather);
         txt_city_name = (TextView) itemView.findViewById(R.id.txt_city_name);
         txt_description = (TextView) itemView.findViewById(R.id.txt_description);
         txt_temperature = (TextView) itemView.findViewById(R.id.txt_temperature);
@@ -146,7 +145,7 @@ public class ForecastFragment extends Fragment {
 
 
 
-                                Picasso.get().load(new StringBuilder("https://openweathermap.org/img/wn/").append(weatherResult.getWeather().get(0).getIcon()).append(".png").toString()).into(img_weather);
+//                                Picasso.get().load(new StringBuilder("https://openweathermap.org/img/wn/").append(weatherResult.getWeather().get(0).getIcon()).append(".png").toString()).into(img_weather);
                                 txt_city_name.setText(weatherResult.getName());
                                 System.out.println(weatherResult.getName());
 //                        txt_description.setText(new StringBuilder("Weather in ").append(weatherResult.getName()).toString());
