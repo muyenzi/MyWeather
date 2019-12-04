@@ -21,6 +21,11 @@ android {
         it.buildConfigField 'String', 'WEATHER_API_KEY', WeatherApiKey
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
@@ -50,5 +55,9 @@ dependencies {
 
     implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
     implementation 'com.label305:asynctask:1.0.0'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.yinglan.shadowimageview:shadowimageview:1.0.4'
 
 }

@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.moringaschool.myweather.HelloActivity;
+import com.moringaschool.myweather.ClothingActivity;
 import com.moringaschool.myweather.R;
 import com.moringaschool.myweather.models.Common;
 import com.moringaschool.myweather.models.WeatherForecastResult;
@@ -46,12 +46,13 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
         holder.txt_date_time.setText(new StringBuilder(Common.convertUnixToDate(weatherForecastResult.getList().get(position).getDt())));
         holder.txt_description.setText(new StringBuilder (String.valueOf(weatherForecastResult.getList().get(position).getWeather().get(0).getDescription())));
         holder.txt_temperature.setText(new StringBuilder(String.valueOf(weatherForecastResult.getList().get(position).getMain().getTemp())).append("°C"));
+        holder.txt_main.setText(new StringBuilder(String.valueOf(weatherForecastResult.getList().get(position).getWeather().get(0).getMain())));
 
         holder.txt_temperature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, HelloActivity.class);
-                intent.putExtra("temp",holder.txt_temperature.getText().toString());
+                Intent intent = new Intent(context, ClothingActivity.class);
+                intent.putExtra("temp",holder.txt_temperature.getText());
 
 //                System.out.println("temp" + holder.txt_temperature.getText().toString());
                 context.startActivity(intent);
@@ -70,7 +71,7 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 
     public class MyViewHolder extends  RecyclerView.ViewHolder  {
 
-        TextView txt_date_time,txt_description,txt_temperature;
+        TextView txt_date_time,txt_description,txt_temperature,txt_main;
         ImageView img_weather;
 
         public MyViewHolder(View itemView){
@@ -80,29 +81,10 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 //            img_weather = (ImageView) itemView.findViewById(R.id.img_weather);
             txt_temperature = (TextView) itemView.findViewById(R.id.txt_temperature);
             txt_description = (TextView) itemView.findViewById(R.id.txt_description);
-//            cardView = (CardView) itemView.findViewById(R.id.cardView);
-//            cardView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-////                    Intent int=new Intent(ForecastFragment.this,);
-//
-//                }
-//            });
+            txt_main = (TextView) itemView.findViewById(R.id.main);
 
-//            itemView.setOnClickListener(this);
 
         }
 
-//        @Override
-//        public void onClick(View v) {
-//if (v == )
-//            int itemPosition = getLayoutPosition();
-//            Intent intent = new Intent(context, HelloActivity.class);
-//            intent.putExtra("position", itemPosition);
-//            intent.putExtra("today", String.valueOf(txt_temperature));
-//
-//
-//
-//        }
     }
 }

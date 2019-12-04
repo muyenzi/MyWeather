@@ -40,19 +40,20 @@ import com.moringaschool.myweather.models.Common;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
- private Toolbar toolbar;
- private TabLayout tabLayout;
- private ViewPager viewPager;
-
- private RelativeLayout relativeLayout;
-
- private FusedLocationProviderClient fusedLocationProviderClient;
- private LocationCallback locationCallback;
- private LocationRequest locationRequest;
+//    ELIANE
+    public static final String TAG = MainActivity.class.getSimpleName();
+    private String gender;
+//  Eliane
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private RelativeLayout relativeLayout;
+    private FusedLocationProviderClient fusedLocationProviderClient;
+    private LocationCallback locationCallback;
+    private LocationRequest locationRequest;
 
  //chelsea
- private DrawerLayout mDrawerLayout;
+    private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
 //    @BindView(R.id.clickForCloth) ImageView mClickForCloth;
 
@@ -62,10 +63,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        eliane
+        Intent intent = getIntent();
+        gender = intent.getStringExtra( "gender" );
+//        eliane
+
         relativeLayout = (RelativeLayout) findViewById(R.id.root_view);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -137,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 //        adapter.addFragment(TodayWeatherFragment.getInstance(),"Today");
         adapter.addFragment(ForecastFragment.getInstance(),"5days");
-        adapter.addFragment(CityFragment.getInstance(),"search");
+
         viewPager.setAdapter(adapter);
 
     }

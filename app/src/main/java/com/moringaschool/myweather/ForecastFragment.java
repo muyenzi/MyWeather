@@ -41,7 +41,7 @@ public class ForecastFragment extends Fragment {
     WeatherApi mService;
 
     ImageView img_weather;
-    TextView txt_city_name, txt_description, txt_temperature, txt_date_time;
+    TextView txt_city_name, txt_description, txt_temperature, txt_date_time ,txt_main;
     ProgressBar loading;
     LinearLayout weather_panel;
     RecyclerView recyclerView_forecast;
@@ -75,6 +75,7 @@ public class ForecastFragment extends Fragment {
         txt_description = (TextView) itemView.findViewById(R.id.txt_description);
         txt_temperature = (TextView) itemView.findViewById(R.id.txt_temperature);
         txt_date_time = (TextView) itemView.findViewById(R.id.txt_date_time);
+        txt_main = (TextView) itemView.findViewById(R.id.main);
 
         weather_panel = (LinearLayout) itemView.findViewById(R.id.weather_panel);
         loading = (ProgressBar) itemView.findViewById(R.id.loading);
