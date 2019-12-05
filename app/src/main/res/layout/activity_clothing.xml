@@ -119,14 +119,37 @@
                     android:textAlignment="center"
                     android:textSize="19dp"
                     android:textStyle="bold" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
                     android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/rancho"
+                    android:layout_centerVertical="true"
                     android:gravity="center"
-                    android:text="scarf \n umbrella"
-                    android:textSize="26dp"/>
+                    android:src="@drawable/bluescarf"
+                    android:id="@+id/scarf" />
+
+                <ImageView
+                    android:id="@+id/umbrella"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@+id/scarf"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/blueumbrella"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@+id/umbrella"
+                    android:gravity="center"
+                    android:src="@drawable/glasses"
+                    android:id="@+id/glasses" />
+
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

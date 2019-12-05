@@ -54,6 +54,7 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
             public void onClick(View v) {
                 Intent intent = new Intent(context, ClothingActivity.class);
                 intent.putExtra("temp",holder.txt_temp.getText());
+                intent.putExtra("description",holder.txt_main.getText());
 //                System.out.println("temp" + holder.txt_temperature.getText().toString());
                 context.startActivity(intent);
 
@@ -65,6 +66,7 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
             public void onClick(View v) {
                 Intent intent = new Intent(context, ClothingActivity.class);
                 intent.putExtra("temp",holder.txt_temp.getText());
+                intent.putExtra("description",holder.txt_main.getText());
 //                System.out.println("temp" + holder.txt_temperature.getText().toString());
                 context.startActivity(intent);
 
@@ -76,6 +78,7 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
             public void onClick(View v) {
                 Intent intent = new Intent(context, ClothingActivity.class);
                 intent.putExtra("temp",holder.txt_temp.getText());
+                intent.putExtra("description",holder.txt_main.getText());
 //                System.out.println("temp" + holder.txt_temperature.getText().toString());
                 context.startActivity(intent);
 
