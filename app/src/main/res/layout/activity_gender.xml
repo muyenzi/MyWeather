@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rainy"
     tools:context=".GenderActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,12 +20,15 @@
             android:orientation="vertical"
             android:id="@+id/maleProfile"
             android:background="@drawable/border">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/eater"
+                android:gravity="center"
                 android:text="Male"
-                android:textSize="20dp"
-                android:gravity="center"/>
+                android:textColor="#124C7C"
+                android:textSize="20dp" />
             <!--            <ImageView-->
             <!--                android:layout_width="150dp"-->
             <!--                android:layout_height="130dp"-->
@@ -50,13 +54,16 @@
             android:id="@+id/femaleProfile"
             android:background="@drawable/border"
             android:layout_marginTop="10dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:fontFamily="@font/eater"
+                android:gravity="center"
                 android:text="Female"
-                android:textSize="20dp"
-                android:gravity="center" />
+                android:textColor="#1B5B8F"
+                android:textSize="20dp" />
             <!--            <ImageView-->
             <!--                android:layout_width="150dp"-->
             <!--                android:layout_height="130dp"-->

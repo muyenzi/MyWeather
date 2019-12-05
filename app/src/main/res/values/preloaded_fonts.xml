@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/aladin</item>
+        <item>@font/aldrich</item>
+        <item>@font/cabin_sketch</item>
+        <item>@font/eater</item>
+        <item>@font/rancho</item>
+    </array>
+</resources>

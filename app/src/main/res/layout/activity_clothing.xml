@@ -16,30 +16,35 @@
             <RelativeLayout
                 android:layout_width="200dp"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recommended Outfit"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
                     android:layout_above="@+id/avatar"
-                    android:layout_marginBottom="30dp">
-                </TextView>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/aladin"
+                    android:text="Recommended Outfit"
+                    android:textAlignment="center"
+                    android:textSize="19sp"
+                    android:textStyle="bold"></TextView>
                 <ImageView
                     android:id="@+id/avatar"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="400dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"/>
+
                 <TextView
                     android:id="@+id/suggestedText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/avatar"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/rancho"
                     android:text="stay warm today"
                     android:textAlignment="center"
-                    android:textSize="20dp" />
+                    android:textSize="26dp" />
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
@@ -53,14 +58,17 @@
                 android:id="@+id/transport"
                 android:background="@drawable/border"
                 android:padding="5dp">
+
                 <TextView
+                    android:id="@+id/titleTransport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/titleTransport"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/rancho"
                     android:text="Recommended Transport"
-                    android:textStyle="bold"
-                    android:textSize="15dp"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
                 <ImageView
                     android:layout_width="34dp"
                     android:layout_height="34dp"
@@ -101,20 +109,24 @@
                 android:id="@+id/accessories"
                 android:background="@drawable/border"
                 android:padding="5dp">
+
                 <TextView
+                    android:id="@+id/titleAccessories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/titleAccessories"
+                    android:fontFamily="@font/aladin"
                     android:text="Recommended Accessories"
-                    android:textStyle="bold"
-                    android:textSize="15dp"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/rancho"
                     android:gravity="center"
                     android:text="scarf \n umbrella"
-                    android:textSize="20dp"/>
+                    android:textSize="26dp"/>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

@@ -5,10 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".drawer.EditLocation">
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="edit location fragment" />-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="173dp"
+        android:background="@drawable/bg3">
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Location"
+        android:textColor="#fff"
+        android:textSize="30sp" />
     <!--    <SearchView-->
     <!--        android:id="@+id/searchLocation"-->
     <!--        android:layout_width="wrap_content"-->
@@ -17,21 +28,25 @@
     <!--        android:queryHint="Search Location "-->
     <!--        android:layout_centerInParent="true"/>-->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:background="#F1F2F1"
-        android:layout_marginTop="100dp">
+        android:gravity="center"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="150dp">
         <EditText
             android:id="@+id/typedLocation"
-            android:layout_width="248dp"
-            android:layout_height="match_parent"
-            android:hint="Store"
-            android:padding="10dp"
-            android:textColor="#A78175" />
-        <Button
-            android:id="@+id/findLocationButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:hint="Change your location"
+            android:background="#fff"
+            android:padding="10dp"
+            android:textColor="#A78175" />
+
+        <Button
+            android:id="@+id/findLocationButton"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/ic_search_black_24dp" />
     </LinearLayout>
 </RelativeLayout>

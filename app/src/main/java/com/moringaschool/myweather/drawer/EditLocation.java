@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.moringaschool.myweather.MainActivity;
 import com.moringaschool.myweather.R;
 public class EditLocation extends AppCompatActivity implements View.OnClickListener {
     private Button findLocationButton;
@@ -28,7 +27,7 @@ public class EditLocation extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == findLocationButton) {
             String clothType = typedLocation.getText().toString();
-            Intent cheHome = new Intent(EditLocation.this, MainActivity.class);
+            Intent cheHome = new Intent(EditLocation.this, LocationActivity.class);
             Toast.makeText(EditLocation.this, "" + clothType, Toast.LENGTH_SHORT).show();
             cheHome.putExtra("clothType", clothType);
             startActivity(cheHome);

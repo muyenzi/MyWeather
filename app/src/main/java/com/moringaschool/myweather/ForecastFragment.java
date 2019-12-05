@@ -150,7 +150,7 @@ public class ForecastFragment extends Fragment {
                                 System.out.println(weatherResult.getName());
 //                        txt_description.setText(new StringBuilder("Weather in ").append(weatherResult.getName()).toString());
 
-                                txt_description.setText(weatherResult.getWeather().get(0).getDescription());
+                                txt_description.setText("Possible " + weatherResult.getWeather().get(0).getDescription());
                                 txt_temperature.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getTemp())).append("°C").toString());
 //                                txt_date_time.setText(Common.convertUnixToDate(weatherResult.getDt()));
 

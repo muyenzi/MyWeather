@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
+    android:background="@drawable/bg3"
     android:gravity="center_horizontal"
     tools:context=".ForecastFragment">
 
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txt_description"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#ffffff"
             android:layout_marginTop="120dp"
             android:layout_marginLeft="78dp"
             android:textStyle="bold"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
                 android:text="14 C"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#ffffff"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txt_city_name"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginLeft="70dp"
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/main"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#ffffff"
                 android:layout_marginLeft="8dp"
                 android:textStyle="bold"
                 android:textSize="15sp"
@@ -96,7 +96,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="410dp"
+
+
+        android:layout_marginTop="416dp"
         android:id="@+id/recycler_forecast"/>
 
 </RelativeLayout>
