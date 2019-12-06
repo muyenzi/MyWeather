@@ -6,79 +6,93 @@
     android:layout_height="match_parent"
     android:background="@drawable/rainy"
     tools:context=".GenderActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:id="@+id/layoutGender">
+        android:layout_centerVertical="true">
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/maleProfile"
-            android:background="@drawable/border">
-
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:id="@+id/layoutGender">
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/eater"
-                android:gravity="center"
-                android:text="Male"
-                android:textColor="#124C7C"
-                android:textSize="20dp" />
-            <!--            <ImageView-->
-            <!--                android:layout_width="150dp"-->
-            <!--                android:layout_height="130dp"-->
-            <!--                android:layout_marginRight="30dp"-->
-            <!--                android:src="@drawable/maleprofile"-->
-            <!--                android:id="@+id/maleProfile"-->
-            <!--                android:elevation="18dp"-->
-            <!--                android:outlineAmbientShadowColor="#000000"/>-->
-            <com.yinglan.shadowimageview.ShadowImageView
-                android:id="@+id/maleProfile1"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                app:shadowRound="8dp"
-                android:elevation="10dp"
-                android:layout_centerInParent="true"
-                app:shadowSrc="@drawable/maleprofile"
-                app:shadowColor="#000000"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/femaleProfile"
-            android:background="@drawable/border"
-            android:layout_marginTop="10dp">
+                android:orientation="vertical"
+                android:id="@+id/maleProfile"
+                android:background="@drawable/border">
 
-            <TextView
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#284A64"
+                    android:fontFamily="@font/eater"
+                    android:gravity="center"
+                    android:text="Male"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+                <!--            <ImageView-->
+                <!--                android:layout_width="150dp"-->
+                <!--                android:layout_height="130dp"-->
+                <!--                android:layout_marginRight="30dp"-->
+                <!--                android:src="@drawable/maleprofile"-->
+                <!--                android:id="@+id/maleProfile"-->
+                <!--                android:elevation="18dp"-->
+                <!--                android:outlineAmbientShadowColor="#000000"/>-->
+                <com.yinglan.shadowimageview.ShadowImageView
+                    android:id="@+id/maleProfile1"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:shadowRound="8dp"
+                    android:elevation="10dp"
+                    android:layout_centerInParent="true"
+                    app:shadowSrc="@drawable/maleprofile"
+                    app:shadowColor="#000000"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="@font/eater"
-                android:gravity="center"
-                android:text="Female"
-                android:textColor="#1B5B8F"
-                android:textSize="20dp" />
-            <!--            <ImageView-->
-            <!--                android:layout_width="150dp"-->
-            <!--                android:layout_height="130dp"-->
-            <!--                android:src="@drawable/femaleprofile"-->
-            <!--                android:id="@+id/femaleProfile"-->
-            <!--                android:elevation="18dp" />-->
-            <com.yinglan.shadowimageview.ShadowImageView
-                android:id="@+id/femaleProfile1"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                app:shadowRound="8dp"
-                android:elevation="10dp"
-                android:layout_centerInParent="true"
-                app:shadowSrc="@drawable/femaleprofile"
-                app:shadowColor="#000000"/>
+                android:orientation="vertical"
+                android:id="@+id/femaleProfile"
+                android:background="@drawable/border"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/eater"
+                    android:gravity="center"
+                    android:background="#284A64"
+                    android:text="Female"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+                <!--            <ImageView-->
+                <!--                android:layout_width="150dp"-->
+                <!--                android:layout_height="130dp"-->
+                <!--                android:src="@drawable/femaleprofile"-->
+                <!--                android:id="@+id/femaleProfile"-->
+                <!--                android:elevation="18dp" />-->
+                <com.yinglan.shadowimageview.ShadowImageView
+                    android:id="@+id/femaleProfile1"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:shadowRound="8dp"
+                    android:elevation="10dp"
+                    android:layout_centerInParent="true"
+                    app:shadowSrc="@drawable/femaleprofile"
+                    app:shadowColor="#000000"/>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

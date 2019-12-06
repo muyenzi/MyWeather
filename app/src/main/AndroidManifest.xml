@@ -15,17 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-        <activity android:name=".drawer.LocationActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".GenderActivity"></activity>
+        <activity android:name=".drawer.LocationActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".drawer.NavigationActivity" />
         <activity android:name=".drawer.EditLocation" />
         <activity android:name=".drawer.RateStars" />
         <activity android:name=".drawer.PrivateActivity" />
-        <activity android:name=".drawer.HelpActivity" /> <!-- <activity android:name=".ForecastActivity"> -->
-        <!--  -->
-        <!-- </activity> -->
+        <activity android:name=".drawer.HelpActivity" />
         <activity android:name=".ClothingActivity" />
-        <activity android:name=".GenderActivity">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

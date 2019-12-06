@@ -35,8 +35,9 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(context).inflate(R.layout.item_weather_forecast,parent,false);
+        cardView = (CardView) itemView.findViewById(R.id.cardView);
 
-    return new MyViewHolder(itemView);
+        return new MyViewHolder(itemView);
     }
 
     @Override
@@ -84,7 +85,17 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 
             }
         });
+      cardView.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(context, ClothingActivity.class);
+        intent.putExtra("temp",holder.txt_temp.getText());
+        intent.putExtra("description",holder.txt_main.getText());
+//                System.out.println("temp" + holder.txt_temperature.getText().toString());
+        context.startActivity(intent);
 
+           }
+        });
 
     }
 
@@ -99,6 +110,9 @@ public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecast
 
         TextView txt_date_time,txt_description,txt_temperature,txt_main,txt_temp;
         ImageView img_weather;
+        CardView cardView;
+
+
         public MyViewHolder(View itemView){
             super(itemView);
 

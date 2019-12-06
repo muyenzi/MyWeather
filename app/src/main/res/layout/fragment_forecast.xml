@@ -2,29 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/bg3"
     android:gravity="center_horizontal"
     tools:context=".ForecastFragment">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:visibility="gone"
         android:orientation="vertical"
         android:id="@+id/weather_panel">
 
 
         <TextView
+            android:id="@+id/txt_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_description"
-            android:textColor="#ffffff"
             android:layout_marginTop="120dp"
-            android:layout_marginLeft="78dp"
-            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="light rain"
+
+            android:textColor="#ffffff"
             android:textSize="20sp"
-            android:text="light rain"/>
+            android:textStyle="bold"
+            android:typeface="serif" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +46,7 @@
                 android:id="@+id/txt_temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
+
                 android:text="14 C"
                 android:textColor="#ffffff"
                 android:textSize="40sp"
@@ -51,16 +54,18 @@
 
 
         </LinearLayout>
+
         <TextView
+            android:id="@+id/txt_city_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_city_name"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_marginLeft="70dp"
             android:layout_marginTop="10dp"
-            android:text="Weather in London,GB"/>
+            android:text="Weather in London,GB"
+            android:textColor="#ffffff"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
 
 <!--        <TextView-->
 <!--            android:layout_width="wrap_content"-->
@@ -84,6 +89,12 @@
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:text="date"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click the cards below, for recommended outfit"
+        android:textColor="#FFFFFF"
+        android:layout_centerInParent="true"/>
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -97,7 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="416dp"
         android:id="@+id/recycler_forecast"/>
 

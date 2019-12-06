@@ -8,25 +8,7 @@
     android:background="@drawable/bg3"
     android:textColor="#FDF8FCFC"
     tools:context=".drawer.LocationActivity">
-    <!--    <TextView-->
-    <!--        android:id="@+id/clothesTextView"-->
-    <!--        android:layout_width="412dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_below="@+id/title"-->
-    <!--        android:layout_alignParentStart="true"-->
-    <!--        android:layout_alignParentLeft="true"-->
-    <!--        android:layout_alignParentTop="true"-->
-    <!--        android:layout_alignParentEnd="true"-->
-    <!--        android:layout_alignParentRight="true"-->
-    <!--        android:layout_marginStart="0dp"-->
-    <!--        android:layout_marginLeft="0dp"-->
-    <!--        android:layout_marginTop="50dp"-->
-    <!--        android:layout_marginEnd="0dp"-->
-    <!--        android:layout_marginRight="0dp"-->
-    <!--        android:layout_weight="1"-->
-    <!--        android:text="hhhhhhhhhhhhhh"-->
-    <!--        android:textColor="#1F7266"-->
-    <!--        android:textSize="20dp" />-->
+
     <RelativeLayout
         android:id="@+id/mainContainer"
         android:layout_width="match_parent"
@@ -51,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20 April 2012, 20:08 PM"
-                android:textSize="14dp"
+                android:textSize="0dp"
                 android:textColor="#FFFFFF"/>
         </LinearLayout>
         <LinearLayout
@@ -132,10 +114,10 @@
                 android:orientation="horizontal"
                 android:weightSum="3">
                 <LinearLayout
-                    android:layout_width="8dp"
+                    android:layout_width="28dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#3CF1EBF1"
+                    android:background="@color/colorPrimary"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="8dp">
@@ -164,12 +146,13 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content" />
                 <LinearLayout
-                    android:layout_width="8dp"
+                    android:layout_width="28dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#3CF1EBF1"
+                    android:background="@color/colorPrimary"
                     android:gravity="center"
                     android:orientation="vertical"
+                    android:layout_marginEnd="-50dp"
                     android:padding="8dp">
                     <ImageView
                         android:layout_width="25dp"
@@ -227,8 +210,5 @@
         app:itemTextColor="#000000"
         app:menu="@menu/drawer_menu">
     </com.google.android.material.navigation.NavigationView>
-    <!--        <Button-->
-    <!--            android:layout_width="67dp"-->
-    <!--            android:layout_height="89dp"-->
-    <!--            android:background="@mipmap/ic_launcher"/>-->
+
 </androidx.drawerlayout.widget.DrawerLayout>
