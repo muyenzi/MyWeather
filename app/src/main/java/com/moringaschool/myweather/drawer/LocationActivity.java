@@ -3,7 +3,6 @@ package com.moringaschool.myweather.drawer;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -78,31 +77,32 @@ public class LocationActivity extends AppCompatActivity {
         sunriseTxt = findViewById( R.id.sunrise );
         sunsetTxt = findViewById( R.id.sunset );
         new weatherTask().execute();
-//        mDrawerLayout = findViewById( R.id.activity_main );
-//        mToggle = new ActionBarDrawerToggle( this , mDrawerLayout , R.string.open , R.string.close );
-//        mDrawerLayout.addDrawerListener( mToggle );
-//        mToggle.syncState();
-//
-//        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
-//        NavigationView nvDrawer = (NavigationView) findViewById( R.id.nav_header );
-//        setupDrawerContent( nvDrawer );
+
 //        eliane
-        Intent intent = getIntent();
-        gender = intent.getStringExtra( "gender" );
+//        Intent intent = getIntent();
+//        gender = intent.getStringExtra( "gender" );
+
+//        //        eliane
+//        Intent intent = getIntent();
+//        gender = intent.getStringExtra( "gender" );
+////        eliane
+
         mClickForCloth.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( LocationActivity.this , ClothingActivity.class );
-                intent.putExtra( "minTemp" , mMinTemp.toString() );
-                intent.putExtra( "maxTemp" , mMaxTemp.toString() );
-                intent.putExtra( "description" , mDescription );
-//                intent.putExtra( "gender" , gender );
+//                intent.putExtra( "minTemp" , mMinTemp.toString() );
+//                intent.putExtra( "maxTemp" , mMaxTemp.toString() );
+//                intent.putExtra( "description" , mDescription );
+////                intent.putExtra( "gender" , gender );
+//
+//                Log.i( TAG , "max: " + mMaxTemp );
+//                Log.i( TAG , "min: " + mMaxTemp );
+//                Log.i( TAG , mDescription );
+////                Log.i( TAG , gender );
+//                startActivity( intent );
 
-                Log.i( TAG , "max: " + mMaxTemp );
-                Log.i( TAG , "min: " + mMaxTemp );
-                Log.i( TAG , mDescription );
-//                Log.i( TAG , gender );
-                startActivity( intent );
+
             }
         } );
 //        end of eliane
@@ -172,11 +172,7 @@ public class LocationActivity extends AppCompatActivity {
         setTitle( menuItem.getTitle() );
         mDrawerLayout.closeDrawers();
         int id = menuItem.getItemId();
-        if (id == R.id.nav_language) {
-            Intent intent = new Intent( LocationActivity.this , RateStars.class );
-            startActivity( intent );
-            return true;
-        } else if (id == R.id.nav_rate) {
+        if (id == R.id.nav_rate) {
             Intent intent = new Intent( LocationActivity.this , RateStars.class );
             startActivity( intent );
             return true;

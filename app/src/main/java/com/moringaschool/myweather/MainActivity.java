@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
 //        eliane
         Intent intent = getIntent();
         gender = intent.getStringExtra( "gender" );
@@ -169,11 +170,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle( menuItem.getTitle() );
         mDrawerLayout.closeDrawers();
         int id = menuItem.getItemId();
-        if (id == R.id.nav_language) {
-            Intent intent = new Intent( MainActivity.this , RateStars.class );
-            startActivity( intent );
-            return true;
-        } else if (id == R.id.nav_rate) {
+        if (id == R.id.nav_rate) {
             Intent intent = new Intent( MainActivity.this , RateStars.class );
             startActivity( intent );
             return true;

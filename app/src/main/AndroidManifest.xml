@@ -16,7 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity android:name=".GenderActivity"></activity>
-        <activity android:name=".drawer.LocationActivity" />
+        <activity android:name=".drawer.LocationActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.moringaschool.myweather.MainActivity">
+            </meta-data>
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".drawer.NavigationActivity" />
         <activity android:name=".drawer.EditLocation" />

@@ -3,15 +3,15 @@
 
     <scale
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:duration="1600"
-        android:fromXScale="1.30"
-        android:fromYScale="1.30"
+        android:duration="900"
+        android:fromXScale="1.10"
+        android:fromYScale="1.10"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:toXScale="1.10"
+        android:toXScale="0.90"
         android:repeatMode="restart"
         android:repeatCount="infinite"
-        android:toYScale="1.10" >
+        android:toYScale="0.90" >
     </scale>
 
 </set>

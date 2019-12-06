@@ -40,7 +40,7 @@ public class ForecastFragment extends Fragment {
     WeatherApi mService;
 
     ImageView img_weather;
-    TextView txt_city_name, txt_description, txt_temperature, txt_date_time ,txt_main;
+    TextView txt_city_name, txt_description, txt_temperature, txt_date_time ,txt_main,txt_message;
     ProgressBar loading;
     LinearLayout weather_panel;
     RecyclerView recyclerView_forecast;
@@ -75,6 +75,7 @@ public class ForecastFragment extends Fragment {
         txt_temperature = (TextView) itemView.findViewById(R.id.txt_temperature);
         txt_date_time = (TextView) itemView.findViewById(R.id.txt_date_time);
         txt_main = (TextView) itemView.findViewById(R.id.main);
+        txt_message = (TextView) itemView.findViewById(R.id.message1);
 
         weather_panel = (LinearLayout) itemView.findViewById(R.id.weather_panel);
         loading = (ProgressBar) itemView.findViewById(R.id.loading);
@@ -84,6 +85,8 @@ public class ForecastFragment extends Fragment {
         recyclerView_forecast = (RecyclerView) itemView.findViewById(R.id.recycler_forecast);
         recyclerView_forecast.setHasFixedSize(true);
         recyclerView_forecast.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false));
+
+
 
         getWeatherInformation();
         getForecastWeatherInformation();
@@ -154,9 +157,11 @@ public class ForecastFragment extends Fragment {
                                 txt_temperature.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getTemp())).append("°C").toString());
 //                                txt_date_time.setText(Common.convertUnixToDate(weatherResult.getDt()));
 
+//                                txt_message.setText("Click the cards below, for recommended outfit");
                                 // Display
                                 weather_panel.setVisibility(View.VISIBLE);
                                 loading.setVisibility(View.GONE);
+                                txt_message.setVisibility(View.VISIBLE);
 
                             }
                         }, new Consumer<Throwable>() {

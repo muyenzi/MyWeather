@@ -21,13 +21,13 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help );
         cardView1 = (CardView)  findViewById(R.id.button1);
-        cardView1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent( HelpActivity.this,NavigationActivity.class);
-                startActivity(intent);
-            }
-        });
+//        cardView1.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent( HelpActivity.this,NavigationActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         cardView2 = (CardView)  findViewById(R.id.Button2);
         cardView2.setOnClickListener(new View.OnClickListener(){
             @Override
