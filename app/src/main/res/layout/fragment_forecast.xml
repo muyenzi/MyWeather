@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/message1"
         android:visibility="gone"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:text="Click the cards below, for recommended outfit"
         android:textColor="#FFFFFF"
         android:layout_centerInParent="true"/>

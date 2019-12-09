@@ -3,6 +3,7 @@ package com.moringaschool.myweather.drawer;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,7 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.androdocs.httprequest.HttpRequest;
 import com.google.android.material.navigation.NavigationView;
-import com.moringaschool.myweather.ClothingActivity;
+import com.moringaschool.myweather.CityClothingActivity;
 import com.moringaschool.myweather.R;
 
 import org.json.JSONException;
@@ -31,17 +32,15 @@ public class LocationActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     String CITY;
+
     //  eliane's codes
     public static final String TAG = LocationActivity.class.getSimpleName();
     private Double mMaxTemp, mMinTemp;
     private String mDescription;
     private String gender;
     @BindView(R.id.clickForCloth) ImageView mClickForCloth;
-    //    end of eliane
-//    Intent cheHome = getIntent();
-//    String CITY = cheHome.getStringExtra("clothType");
-//    Toast.makeText(this, "" + CITY, Toast.LENGTH_SHORT).show();
-//    String CITY = "London";
+
+
     String API = "4de3768c62b67fe359758977a3efc069";
     TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
             sunsetTxt;
@@ -54,20 +53,7 @@ public class LocationActivity extends AppCompatActivity {
         ButterKnife.bind( this );
         Intent cheHome = getIntent();
         CITY = cheHome.getStringExtra("clothType");
-//        if (! CITY.isEmpty()){
-//            CITY = cheHome.getStringExtra("clothType");
-//
-//
-//        }else{
-//
-//            CITY = "Kigali";
-//        }
-////        Intent intent = getIntent();
-////        String locationName = intent.getStringExtra("locationName");
-////
-//////        mClothesTextView.setText("For this search "  + " ' "  + locationName   + " ' " + " we have: ");
-//
-//        Toast.makeText(LocationActivity.this, locationName, Toast.LENGTH_LONG).show();
+
         addressTxt = findViewById( R.id.address );
         updated_atTxt = findViewById( R.id.updated_at );
         statusTxt = findViewById( R.id.status );
@@ -78,33 +64,20 @@ public class LocationActivity extends AppCompatActivity {
         sunsetTxt = findViewById( R.id.sunset );
         new weatherTask().execute();
 
-//        eliane
-//        Intent intent = getIntent();
-//        gender = intent.getStringExtra( "gender" );
 
-//        //        eliane
-//        Intent intent = getIntent();
-//        gender = intent.getStringExtra( "gender" );
-////        eliane
 
-        mClickForCloth.setOnClickListener( new View.OnClickListener() {
+        mClickForCloth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( LocationActivity.this , ClothingActivity.class );
-//                intent.putExtra( "minTemp" , mMinTemp.toString() );
-//                intent.putExtra( "maxTemp" , mMaxTemp.toString() );
-//                intent.putExtra( "description" , mDescription );
-////                intent.putExtra( "gender" , gender );
-//
-//                Log.i( TAG , "max: " + mMaxTemp );
-//                Log.i( TAG , "min: " + mMaxTemp );
-//                Log.i( TAG , mDescription );
-////                Log.i( TAG , gender );
-//                startActivity( intent );
-
-
+                Intent intent = new Intent(LocationActivity.this, CityClothingActivity.class);
+                intent.putExtra("minTemp",mMinTemp.toString());
+                intent.putExtra("maxTemp",mMaxTemp.toString());
+                intent.putExtra("description",mDescription);
+                intent.putExtra("gender",gender);
+                Log.d(TAG,"value: "+mMaxTemp);
+                startActivity(intent);
             }
-        } );
+        });
 //        end of eliane
     }
     class weatherTask extends AsyncTask<String, Void, String> {
