@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,18 +34,18 @@ public class LocationActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     String CITY;
-
+    Animation anim;
     //  eliane's codes
     public static final String TAG = LocationActivity.class.getSimpleName();
     private Double mMaxTemp, mMinTemp;
     private String mDescription;
+    private String mMain;
     private String gender;
     @BindView(R.id.clickForCloth) ImageView mClickForCloth;
 
 
     String API = "4de3768c62b67fe359758977a3efc069";
-    TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
-            sunsetTxt;
+    TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt, mainTxt ,sunsetTxt;
     //    public  nav_rate
 //    @BindView(R.id.clothesTextView) TextView mClothesTextView;
     @Override
@@ -62,9 +64,12 @@ public class LocationActivity extends AppCompatActivity {
         temp_maxTxt = findViewById( R.id.temp_max );
         sunriseTxt = findViewById( R.id.sunrise );
         sunsetTxt = findViewById( R.id.sunset );
+        mainTxt = findViewById( R.id.main);
+
         new weatherTask().execute();
 
-
+        anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoomout);
+        mClickForCloth.startAnimation(anim);
 
         mClickForCloth.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +78,7 @@ public class LocationActivity extends AppCompatActivity {
                 intent.putExtra("minTemp",mMinTemp.toString());
                 intent.putExtra("maxTemp",mMaxTemp.toString());
                 intent.putExtra("description",mDescription);
+                intent.putExtra("main",mMain);
                 intent.putExtra("gender",gender);
                 Log.d(TAG,"value: "+mMaxTemp);
                 startActivity(intent);
@@ -109,13 +115,20 @@ public class LocationActivity extends AppCompatActivity {
                 Long sunrise = sys.getLong( "sunrise" );
                 Long sunset = sys.getLong( "sunset" );
                 String weatherDescription = weather.getString( "description" );
+                String maintext = weather.getString( "main" );
+
                 String address = jsonObj.getString( "name" ) + ", " + sys.getString( "country" );
+
 //              eliane's codes
                 mMaxTemp = main.getDouble( "temp_max" );
                 mMinTemp = main.getDouble( "temp_min" );
                 mDescription = weather.getString( "description" );
+                mMain = weather.getString( "main" );
+
 //              end of eliane
+
                 /* Populating extracted data into our views */
+
                 addressTxt.setText( address );
                 updated_atTxt.setText( updatedAtText );
                 statusTxt.setText( weatherDescription.toUpperCase() );
@@ -124,6 +137,8 @@ public class LocationActivity extends AppCompatActivity {
                 temp_maxTxt.setText( tempMax );
                 sunriseTxt.setText( new SimpleDateFormat( "hh:mm a" , Locale.ENGLISH ).format( new Date( sunrise * 1000 ) ) );
                 sunsetTxt.setText( new SimpleDateFormat( "hh:mm a" , Locale.ENGLISH ).format( new Date( sunset * 1000 ) ) );
+                mainTxt.setText(maintext);
+
                 /* Views populated, Hiding the loader, Showing the main design */
                 findViewById( R.id.loader ).setVisibility( View.GONE );
                 findViewById( R.id.mainContainer ).setVisibility( View.VISIBLE );

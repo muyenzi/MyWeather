@@ -77,7 +77,7 @@ public class ClothingActivity extends AppCompatActivity {
                     mScarf.setVisibility(View.GONE);
                     recommendation();
                 }
-                else if (temperature>22.900 && temperature<=26.900){
+                else if (temperature>22.900 && temperature<=30.900){
                     int imageResource = getResources().getIdentifier("@drawable/msunny",null,this.getPackageName());
                     mImage.setImageResource(imageResource);
                     mSuggestedText.setText("It's hot outside.");
@@ -138,7 +138,7 @@ public class ClothingActivity extends AppCompatActivity {
                     mScarf.setVisibility(View.GONE);
                     recommendation();
                 }
-                else if (temperature>22.900 && temperature<=26.900){
+                else if (temperature>22.900 && temperature<=30.900){
                     int imageResource = getResources().getIdentifier("@drawable/fcasual",null,this.getPackageName());
                     mImage.setImageResource(imageResource);
                     mSuggestedText.setText("It's hot outside.");
